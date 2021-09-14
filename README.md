@@ -1,6 +1,6 @@
 # Udacity Project Model Optimization
 # Summary
-This was a comparison between AzureML Hyperdrive and AutoML model optimization to find the best model for predicting a Yes or a No in the banking dataset. 
+This was a comparison between AzureML Hyperdrive and AutoML model optimization to find the best model for predicting a Yes or a No in the banking dataset. Since there is no documentation about the data we can only understand that the data is marketing related and that we are looking for a binary outcome.
 ## Conclusion
 The model that performed the best was the VotingEnsemble from the AutoML optimization process with an accuracy of 92.25%.
 
@@ -13,7 +13,8 @@ The model produced from the AutoML with the best results was the VotingEnsemble 
 # Comparison
 AutoML was the easier architecture to setup and required less code to ultimately produce a better result in terms of accuracy. The difference that I can see here is that AutoML will try many different types of models to see which is the best for classifying the data presented, where scikit-learn will only try what you specify it should try and no more or less.
 
-# Future work
+# Future Work
 Feature engineering may help this model to be more accurate. Having domain knowledge of banking and how some of the variables may be used to create more features for the model to use would increase the accuracy.
 
+# Proof of Cluster Clean Up
 ![image](https://user-images.githubusercontent.com/28558135/133321039-1027a188-bc97-47bb-b74b-b32a202f7ae5.png)

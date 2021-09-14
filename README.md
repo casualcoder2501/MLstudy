@@ -1,4 +1,4 @@
-# MLstudy
+# Udacity Project Model Optimization
 Summary
 This was a comparison between AzureML Hyperdrive and AutoML model optimization to find the best model for predicting a Yes or a No in the banking dataset. The model that performed the best was the VotingEnsemble from the AutoML optimization process with an accuracy of 92.25%.
 

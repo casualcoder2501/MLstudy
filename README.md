@@ -14,7 +14,11 @@ The scikit-learn pipeline uses an environment yml file to define the python depe
 ds = Dataset.Tabular.from_delimited_files(path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
 ds = ds.to_pandas_dataframe().dropna()
 ```
-The pipeline then cleans the data by dropping the nulls and one-hot encoding the categorical data and finally outputting the cleansed x and y dataframes. 
+The pipeline then cleans the data by dropping the nulls and one-hot encoding the categorical data and finally outputting the cleansed x and y dataframes that are then split into the traininig and testing data that are run through the model.
+```
+x, y = clean_data(ds)
+x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.20)
+```
 ## Model and Termination Policy
 Using a Logistic Regression classification model the random parameter sampler mixed and matched predetermined parameter values for the arguements C and max_iter to find the pair of hyperparameters that produced the highest accuracy. The Bandit early termination process was used to terminate any models that were being run that were not within a given amount of the best model that was run, this saved computing nodes from having to finish training models that were going to be sub-par.
 
